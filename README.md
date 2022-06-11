@@ -1,2 +1,2 @@
-# Tecgnowand
+# Technowand
 project for IoT course - spring 2022 Technion
