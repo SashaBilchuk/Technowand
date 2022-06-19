@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SmartThermostat" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Text View Style -->
+    <style name="TextView.Header.Large.Blue" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="fontFamily">@font/cairo_light</item>
+    </style>
+
+    <style name="TextView.Header.Medium.Blue" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="fontFamily">@font/cairo_light</item>
+    </style>
+
+    <style name="TextView.Header.Large.Blue.700" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/blue_700</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
+    </style>
+
+    <style name="TextView.Header.Medium.Blue.500" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="fontFamily">@font/cairo_light</item>
+    </style>
+
+    <style name="TextView.Header.Large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/black_header</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
+    </style>
+
+    <style name="TextView.Header.Large.Red" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/red_500</item>
+        <item name="fontFamily">@font/cairo_light</item>
+    </style>
+
+    <style name="TextView.Header.XXLarge" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_40</item>
+        <item name="android:textColor">@color/black_header</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
+    </style>
+</resources>

@@ -1,0 +1,235 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.MainActivity">
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            style="@style/TextView.Header.XXLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="120dp"
+            android:includeFontPadding="false"
+            android:text="waiting for the input"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="160dp" />
+
+        <TextView
+            android:id="@+id/tvConnectivityStatusHeader"
+            style="@style/TextView.Header.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connectivity_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvConnectivityStatus"
+            style="@style/TextView.Header.Large.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toEndOf="@id/tvConnectivityStatusHeader"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDeviceNameHeader"
+            style="@style/TextView.Header.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:text="@string/device_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvConnectivityStatusHeader" />
+
+        <TextView
+            android:id="@+id/tvDeviceName"
+            style="@style/TextView.Header.Large.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintStart_toEndOf="@id/tvDeviceNameHeader"
+            app:layout_constraintTop_toBottomOf="@id/tvConnectivityStatus" />
+
+        <ImageView
+            android:id="@+id/btnDeviceInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@id/tvDeviceName"
+            app:layout_constraintStart_toEndOf="@id/tvDeviceName"
+            app:layout_constraintTop_toTopOf="@id/tvDeviceName" />
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            style="@style/TextView.Header.XXLarge"
+            android:layout_width="28dp"
+            android:layout_height="24dp"
+            android:includeFontPadding="false"
+            android:text="@string/initial_temperature"
+            app:layout_constraintBottom_toTopOf="@+id/lottieViewLight"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTemperatureUnit"
+            style="@style/TextView.Header.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/lottieViewTemperature"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieViewTemperature"
+            android:layout_width="17dp"
+            android:layout_height="26dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btnEnableNotify"
+            app:layout_constraintHeight_percent="0.125"
+            app:layout_constraintStart_toEndOf="@+id/tvTemperature"
+            app:layout_constraintWidth_percent="0.15"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReadTemperature"
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:fontFamily="@font/cairo_semibold"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/read"
+            android:textSize="@dimen/sp_16"
+            android:visibility="invisible"
+            app:icon="@drawable/ic_read"
+            app:layout_constraintBottom_toTopOf="@+id/tvTemperature"
+            app:layout_constraintEnd_toStartOf="@+id/tvTemperatureUnit"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnableNotify"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="52dp"
+            android:layout_height="47dp"
+            android:fontFamily="@font/cairo_semibold"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/notify"
+            android:textSize="@dimen/sp_16"
+            android:visibility="invisible"
+            app:icon="@drawable/ic_notification"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toEndOf="@+id/btnToggleLed" />
+
+        <TextView
+            android:id="@+id/tvHumidityUnit"
+            style="@style/TextView.Header.Large"
+            android:layout_width="81dp"
+            android:layout_height="76dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieViewHumidity"
+            android:layout_width="19dp"
+            android:layout_height="10dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.25"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReadHumidity"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="84dp"
+            android:fontFamily="@font/cairo_semibold"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/read"
+            android:textSize="@dimen/sp_16"
+            app:icon="@drawable/ic_read"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnableNotifyHumidity"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:fontFamily="@font/cairo_semibold"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/notify"
+            android:textSize="@dimen/sp_16"
+            android:visibility="invisible"
+            app:icon="@drawable/ic_notification"
+            app:layout_constraintBottom_toTopOf="@+id/lottieViewTemperature"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toEndOf="@+id/lottieViewLight" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieViewLight"
+            android:layout_width="18dp"
+            android:layout_height="19dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btnToggleLed"
+            app:layout_constraintEnd_toStartOf="@+id/lottieViewTemperature"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.2"
+            app:lottie_autoPlay="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToggleLed"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginBottom="44dp"
+            android:fontFamily="@font/cairo_semibold"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/led_off"
+            android:textSize="@dimen/sp_16"
+            android:visibility="invisible"
+            app:icon="@drawable/ic_off"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toEndOf="@+id/lottieViewHumidity" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartScanning"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="187dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/cairo_light"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/connect"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeviceInformation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

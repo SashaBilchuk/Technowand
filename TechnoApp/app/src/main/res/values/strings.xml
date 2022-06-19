@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TechnoWand</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="connectivity_status">Connectivity Status: </string>
+    <string name="no_sensor_connected">Not Connected</string>
+    <string name="device_name">Sensor Name:</string>
+    <string name="read">Read</string>
+    <string name="notify">Notify</string>
+    <string name="initial_temperature">0</string>
+    <string name="led_off">Led Off</string>
+    <string name="led_on">Led On</string>
+
+    <string name="dialog_title">Device Scanner</string>
+    <string name="dialog_message">Nearby Sensors will be displayed below</string>
+    <string name="dialog_positive_button">Start</string>
+    <string name="dialog_neutral_button">Dismiss</string>
+    <string name="dialog_negative_button">Stop</string>
+
+    <string name="connected">CONNECTED</string>
+    <string name="disconnected">DISCONNECTED</string>
+    <string name="unit_humidity">%rh</string>
+    <string name="manufacturer_name">Manufacturer Name:</string>
+    <string name="manufacturer_model">Manufacturer Model: </string>
+</resources>

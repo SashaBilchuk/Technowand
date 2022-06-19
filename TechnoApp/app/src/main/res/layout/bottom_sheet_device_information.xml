@@ -1,0 +1,46 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:padding="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvManufacturerNameHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manufacturer_name"
+            style="@style/TextView.Header.Large"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvManufacturerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            style="@style/TextView.Header.Large.Blue"
+            app:layout_constraintBottom_toBottomOf="@id/tvManufacturerNameHeader"
+            app:layout_constraintStart_toEndOf="@id/tvManufacturerNameHeader"/>
+
+        <TextView
+            android:id="@+id/tvManufacturerModelHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/manufacturer_model"
+            style="@style/TextView.Header.Large"
+            app:layout_constraintTop_toBottomOf="@id/tvManufacturerNameHeader"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvManufacturerModelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            style="@style/TextView.Header.Large.Blue"
+            app:layout_constraintBottom_toBottomOf="@id/tvManufacturerModelHeader"
+            app:layout_constraintStart_toEndOf="@id/tvManufacturerModelHeader"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
