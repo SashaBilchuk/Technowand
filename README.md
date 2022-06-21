@@ -35,4 +35,4 @@ This repo consists of 3 main parts:
 2) TechnoApp with it's own Readme.md
 3) TechnoSketch with it's own Readme.md
 
-
+https://petewarden.github.io/magic_wand/website/index.html
