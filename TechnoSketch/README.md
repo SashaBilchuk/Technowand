@@ -1,6 +1,7 @@
 # TechnoSketch
 
-Magic Wand example for [TensorFlow Lite Micro](https://www.tensorflow.org/lite/microcontrollers) on the [Arduino Nano 33 BLE Sense](https://store.arduino.cc/usa/tiny-machine-learning-kit).
+This part describes a usage of the Arduino Sketch for recording and classifying gestures into symbols.
+Basically, It recieves a signal of 3 axes of acceleration and 3 axes of gyroscope and each time we move a stick it updates a change in location of a chip into a X,Y coordinate from a POV of a chip. Then the coordinates are normalized into a range of -127 to 128 or -0.5 to 0.5 and then into a 32*32 bit picture which describe a single gesture in a form of a stroke-line.
 
 
 ## How To Use:
