@@ -13,4 +13,7 @@ Given you have uploaded a new model that was trained with your labels, now we ne
 - Upload the sketch to your arduino.
 
 Now we are ready to pair and do our magic gestures, but first we need to fix us an android app up.
-More on that at 
+More on that at https://github.com/SashaBilchuk/Technowand/blob/main/TechnoApp/README.md
+
+Created based on https://github.com/petewarden/magic_wand project.
+More on Pete Warden at https://petewarden.com/
