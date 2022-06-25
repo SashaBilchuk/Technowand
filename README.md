@@ -1,8 +1,6 @@
 # Technowand
 Project for IoT course - spring 2022 Technion
-Based on open-source projects of:
-1. https://github.com/petewarden/magic_wand
-2. https://github.com/ranitraj/SmartThermostat
+
 
 ## Intro
 The assignment was to use IMU sensor of arduino + bluetooth + android app.
@@ -36,3 +34,16 @@ This repo consists of 3 main parts:
 3) TechnoSketch with it's own Readme.md
 
 https://petewarden.github.io/magic_wand/website/index.html
+
+After you upload magic_wand_capture.ino you can go to the website listed above and record new gestures, label them and download a json file containing the data.
+Then go to the jupyter notebook.
+In a second cell specify a link to a zip file containing the json-files inside a `magic_wand_digit_data-2` folder.
+Then go to cell 12 and specify `NUMBER_OF_CLASSES` at `model = make_model(input_shape=(IMAGE_WIDTH, IMAGE_HEIGHT, 3), num_classes=NUMBER_OF_CLASSES)`
+In the end a `techno_wand_model_data.cc` is created. Paste it to a `magic_wand_model_data.cpp` at TechnoSketch folder and upload it to your Arduino.
+
+Now you need to follow the instruction in TechnoSketch [Readme.md](https://github.com/SashaBilchuk/Technowand/blob/main/TechnoSketch/README.md)
+
+
+Based on open-source projects of:
+1. https://github.com/petewarden/magic_wand
+2. https://github.com/ranitraj/SmartThermostat
