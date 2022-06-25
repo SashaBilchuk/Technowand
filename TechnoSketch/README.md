@@ -3,7 +3,7 @@
 Magic Wand example for [TensorFlow Lite Micro](https://www.tensorflow.org/lite/microcontrollers) on the [Arduino Nano 33 BLE Sense](https://store.arduino.cc/usa/tiny-machine-learning-kit).
 
 
-##How To Use:
+## How To Use:
 
 Given you have uploaded a new model that was trained with your labels, now we need to make it work. 
 - Go to `magic_wand.ino`
