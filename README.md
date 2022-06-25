@@ -22,7 +22,7 @@ Therefore I came with a name - Technowand!
 - peterwarden's 
 
 ### Languages needed
-- C
+- C++
 - Java
 - Python(for Tensor Flow deep learning)
 
